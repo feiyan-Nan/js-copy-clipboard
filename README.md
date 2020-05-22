@@ -1,44 +1,53 @@
-# js-copy-clipboard v1.0.8
+# js-copy-clipboard v1.0.2 [![Build Status](https://travis-ci.org/chalk/chalk.svg?branch=master)](https://travis-ci.org/chalk/chalk)
 
-The js-monitors library as Front-end code exception monitoring
-
-## Installation
+The js-copy-clipboard library as Front-end code copy clipboard, Add custom content to the copied clipboard
 
 Using npm:
 
 ```shell
 $ npm i -g npm
-$ npm i --save js-monitors
+$ npm i --save js-copy-clipboard
 ```
 
-In Browser.js:
+#Example
+
+```js
+import copyClipboard from 'js-copy-clipboard';
+
+copyClipboard([
+  '作者：nanfeiyan',
+  '链接：https://juejin.im/user/5b2db436f265da59961bd003/posts',
+  '来源：juejin',
+  '著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。',
+]);
+```
+
+When you use `Ctrl+C` to copy your site, the pasted content will be followed by the content you need to attach, as shown below
 
 ```shell
-// It only takes two steps to use
-// first:
-// <body class="服务器日志记录地址"></body>
-<body class="https://www.baidu.com/"></body>
-
-// second
-require('js-monitors');
+Copied content...
+作者：nanfeiyan
+链接：https://juejin.im/user/5b2db436f265da59961bd003/posts
+来源：juejin
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处.
 ```
 
-> See the [package source](https://github.com/nanfeiyan123/js-monitor) for more details.
+# Installation
 
-| 字段名称 |               功能                | 可能值                                                                                                                                      |
-| :------: | :-------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| charset  |          浏览器编码环境           | utf-8 \|\| gbk                                                                                                                              |
-|   col    |          出错文件所在列           | number                                                                                                                                      |
-|   date   |            发生的时间             | 2020-5-22 15:4:15                                                                                                                           |
-|  device  | 手机端(WeChat,QQ,WeiBo)还是 pc 端 | IOS Brower                                                                                                                                  |
-| errStack |            错误栈信息             | Error: 程序抛出的错误信息 ↵ at http://127.0.0.1:5500/test/index.html:48:11                                                                  |
-| filePath |            出错的文件             | http://127.0.0.1:5500/test/index.html                                                                                                       |
-|   info   |             错误信息              | Error: 程序抛出的错误信息                                                                                                                   |
-|   lang   |            使用的语言             | zh-CN                                                                                                                                       |
-|   line   |          出错文件所在行           | number                                                                                                                                      |
-| platform |        win32 还是苹果系统         | Win32                                                                                                                                       |
-|  screen  |              分辨率               | 375 \* 667                                                                                                                                  |
-|    ua    |             UserAgent             | Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 |
-| viewUrl  |                URL                | http://127.0.0.1:5500/test/index.html                                                                                                       |
+Can be used as npm package and then leveraged using commonjs bundler/loader:
+
+```js
+npm i --save copy-to-clipboard
+```
+
+Can be utilized using xxxx.com. Add following script to your page:
+
+```js
+<script src='https://xxxx.com/lib/index.min.js' async></script>
+```
+
+You will have window.copyClipboard exposed for you to use.
+
+> See the [package source](https://github.com/nanfeiyan123/js-copy-clipboard) for more details.
 
 **有问题请联系 `3328921305@qq.com`**

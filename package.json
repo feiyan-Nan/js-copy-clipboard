@@ -1,11 +1,26 @@
 {
   "name": "js-copy-clipboard",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "modules",
+    "copy",
+    "clipboard",
+    "browser"
+  ],
+  "author": {
+    "name": "nanfeiyan",
+    "email": "3328921305@qq.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "homepage": "https://github.com/nanfeiyan123/js-copy-clipboard"
 }
