@@ -50,4 +50,4 @@ You will have window.copyClipboard exposed for you to use.
 
 > See the [package source](https://github.com/nanfeiyan123/js-copy-clipboard) for more details.
 
-**有问题请联系 `3328921305@qq.com`**
+**If you have any questions, please contact me `3328921305@qq.com`**
